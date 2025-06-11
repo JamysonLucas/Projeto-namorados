@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <canvas id="fundo-estrelado"></canvas>
+</head>
+<body>
+    <div class="estrelas"></div>
+
+    <!-- Tela 1 -->
+    <div class="tela1" id="tela1">
+        <button class="botao" onclick="mostrarTela2()">Toque aqui 💌</button>
+    </div>
+
+    <!-- Tela 2 -->
+    <div class="tela2" id="tela2">
+
+        <!-- Carrossel de Imagens -->
+        <div class="mensagem">
+            <div class="carrossel">
+                <button class="nav prev" onclick="mudarImagem(-1)">❮</button>
+                <img id="imagemCarrossel" src="#" alt="Foto" class="imagem">
+                <button class="nav next" onclick="mudarImagem(1)">❯</button>
+            </div>
+            <div class="nome" id="nomePessoa">Para o meu amor, Dalva!</div>
+            <div class="texto" id="mensagem">Mais um dia dos namorados juntos amor, espero que tenha muito mais ate
+                porque sao apenas o terceiro ano de namoro, nao sou nem um pouco bom em texto mas eu to aqui para dizer
+                o tanto que eu te amo amor, mesmo com tudo que ja passamos e ainda iremos passa por mais coisas mas o
+                importante é que hoje e sempre nois conseguimos sai das situaçoes dificeis juntos, voce esta comigo em
+                todas as situaçoes dificeis da minha vida, obrigado por sempre ser presente, me apoiar e sempre me ajuda
+                com tudo. Espero que esse contador que esta ai embaixo nunca pare de contar, EU TE AMO MUITO AMOR!💗
+            </div>
+            <div class="contador-container">
+                <div class="texto-contador">Contador do Amor! 💌</div>
+                <div class="contador" id="contador">
+                    <div class="bloco">
+                        <div class="numero" id="contador-anos-numero">00</div>
+                        <div class="label">anos</div>
+                    </div>
+                    <div class="bloco">
+                        <div class="numero" id="contador-meses-numero">03</div>
+                        <div class="label">meses</div>
+                    </div>
+                    <div class="bloco">
+                        <div class="numero" id="contador-dias-numero">18</div>
+                        <div class="label">dias</div>
+                    </div>
+                    <div class="bloco">
+                        <div class="numero" id="contador-horas-numero">17</div>
+                        <div class="label">horas</div>
+                    </div>
+                    <div class="bloco">
+                        <div class="numero" id="contador-minutos-numero">43</div>
+                        <div class="label">minutos</div>
+                    </div>
+                    <div class="bloco">
+                        <div class="numero" id="contador-segundos-numero">11</div>
+                        <div class="label">segundos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spotify">
+            <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/6Y7ptR7MaJbuR3RHmL2SvH?utm_source=generator&theme=0"
+                width="100%" height="152" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
