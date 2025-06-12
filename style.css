@@ -3,17 +3,42 @@
 }
 
 @media (max-width: 600px) {
+  .carrossel {
+    flex-direction: column;
+    padding: 0 10px;
+    position: relative;
+    overflow: visible;
+  }
+
+  .nav {
+    position: relative; /* remove o absolute */
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    font-size: 24px;
+    padding: 10px 0;
+  }
+
+  .nav.prev {
+    order: 1; /* botão antes da imagem */
+    margin-bottom: 10px;
+  }
+
   .imagem {
+    order: 2;
     width: 80%;
+    max-width: none;
+  }
+
+  .nav.next {
+    order: 3; /* botão depois da imagem */
+    margin-top: 10px;
   }
 
   .texto {
     font-size: 14px;
     padding: 0 10px;
-  }
-
-  .carrossel {
-    flex-direction: column;
   }
 
   .contador {
