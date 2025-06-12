@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +12,6 @@ body, html {
   text-align: center;
 }
 
-/* Containers das telas */
 .tela1, .tela2 {
   position: absolute;
   width: 100%;
@@ -37,14 +35,10 @@ body, html {
   padding: 20px;
 }
 
-/* Mensagem e conteúdo */
 .mensagem {
   padding-top: 20px;
   background-color: black;
   opacity: 0.8;
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
 }
 
 .botao {
@@ -55,8 +49,12 @@ body, html {
   border: 2px solid white;
   border-radius: 10px;
   cursor: pointer;
-  max-width: 90vw;
-  word-wrap: break-word;
+}
+
+.imagem {
+  width: 200px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .nome {
@@ -67,57 +65,45 @@ body, html {
 }
 
 .texto {
-  max-width: 100%;
+  max-width: 700px;
   margin-bottom: 30px;
   font-size: 16px;
-  padding: 0 10px;
-  word-wrap: break-word;
 }
 
-/* Carrossel */
-.carrossel {
-  position: relative;
+body {
+  background-color: #111;
+  font-family: Arial, sans-serif;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  z-index: 2;
-  max-width: 90vw;
-  margin-left: auto;
-  margin-right: auto;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.imagem {
-  width: 250px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #fff;
+.spotify {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+}
+
+.spotify iframe {
+  width: 100%;
   max-width: 100%;
-  height: auto;
-}
-
-.nav {
-  background: none;
-  color: white;
-  font-size: 30px;
+  height: 80px;
   border: none;
-  cursor: pointer;
-  padding: 0 15px;
-  user-select: none;
+  border-radius: 0;
 }
 
-.nav:hover {
-  color: pink;
-}
-
-/* Contador */
 .contador-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
-  max-width: 100%;
-  padding: 0 10px;
 }
 
 .texto-contador {
@@ -131,8 +117,6 @@ body, html {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-items: center;
-  z-index: 11;
-  max-width: 100%;
 }
 
 .bloco {
@@ -146,7 +130,6 @@ body, html {
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-  word-break: break-word;
 }
 
 .bloco:hover {
@@ -165,7 +148,6 @@ body, html {
   margin-top: 4px;
 }
 
-/* Fundo estrelado */
 #fundo-estrelado {
   position: fixed;
   width: 100%;
@@ -176,115 +158,33 @@ body, html {
   z-index: 1;
 }
 
-/* Spotify */
-.spotify {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+/* ... estilos anteriores mantidos ... */
+
+.carrossel {
+  position: relative;
   display: flex;
+  align-items: center;
   justify-content: center;
-  background-color: #000;
-  z-index: 10;
+  margin-bottom: 20px;
+  z-index: 1;
 }
 
-.spotify iframe {
-  width: 100%;
-  max-width: 100%;
-  height: 80px;
+.imagem {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #fff;
+}
+
+.nav {
+  background: none;
+  color: white;
+  font-size: 30px;
   border: none;
-  border-radius: 0;
+  cursor: pointer;
+  padding: 0 20px;
 }
 
-/* Ajustes para celulares */
-@media (max-width: 600px) {
-  .botao {
-    font-size: 16px;
-    padding: 12px 25px;
-  }
-
-  .nome {
-    font-size: 22px;
-    margin-bottom: 15px;
-  }
-
-  .texto {
-    font-size: 14px;
-    padding: 0 5px;
-  }
-
-  .imagem {
-    width: 90vw;
-    max-width: 300px;
-  }
-
-  .carrossel {
-    flex-direction: row;
-    gap: 10px;
-  }
-
-  .nav {
-    font-size: 24px;
-    padding: 0 10px;
-  }
-
-  .contador {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-
-  .bloco {
-    width: 80px;
-    height: 80px;
-  }
-
-  .numero {
-    font-size: 22px;
-  }
-
-  .label {
-    font-size: 12px;
-  }
-
-  .texto-contador {
-    font-size: 20px;
-  }
-
-  /* Para evitar que o spotify fique muito grande no celular */
-  .spotify iframe {
-    height: 60px;
-  }
-}
-
-/* Para telas ainda menores */
-@media (max-width: 350px) {
-  .botao {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-
-  .nome {
-    font-size: 18px;
-  }
-
-  .texto {
-    font-size: 13px;
-  }
-
-  .contador {
-    grid-template-columns: 1fr;
-  }
-
-  .bloco {
-    width: 70px;
-    height: 70px;
-  }
-
-  .numero {
-    font-size: 18px;
-  }
-
-  .label {
-    font-size: 11px;
-  }
+.nav:hover {
+  color: pink;
 }

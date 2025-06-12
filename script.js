@@ -2,17 +2,21 @@ const imagens = [
   'images/foto1.jpg',
   'images/foto2.jpg',
   'images/foto3.jpg',
-  'images/foto4.jpg',
+  'images/foto4.jpg'
   // Adicione mais se quiser
 ];
 
 let indiceAtual = 0;
 
 function mostrarTela2() {
-  document.getElementById('tela1').style.display = 'none';
-  document.getElementById('tela2').style.display = 'flex';
-  atualizarImagem();
-  iniciarContador();
+  document.getElementById('tela1').style.opacity = '0';
+  setTimeout(() => {
+    document.getElementById('tela1').style.display = 'none';
+    document.getElementById('tela2').style.display = 'flex';
+    document.getElementById('tela2').style.opacity = '1';
+    atualizarImagem();
+    iniciarContador();
+  }, 1000); // Tempo para a transição de opacidade
 }
 
 function mudarImagem(direcao) {
@@ -124,5 +128,3 @@ function moverEstrelas() {
 
 // Inicia a animação
 setInterval(desenharEstrelas, 50);
-
-// --- Seu código de carrossel, contador e funções adicionais devem ficar aqui ---
