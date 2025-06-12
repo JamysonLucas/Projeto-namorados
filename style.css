@@ -54,6 +54,7 @@ body {
   margin: 0;
   height: 100vh;
   overflow-y: auto;
+  display: block; /* ⬅️ não use flex no body nesse caso */
 }
 
 .tela1, .tela2 {
@@ -77,9 +78,11 @@ z-index: 2;
   color: white;
   text-align: center;
   padding: 20px;
-  overflow-y: auto;         /* ✅ permite rolar o conteúdo */
-  height: 100vh;            /* importante para ocupar a tela toda */
-  position: relative;       /* ajuda a manter layout fixo */
+  overflow-y: auto;
+  height: 100vh;
+  position: relative;
+  align-items: center; /* ❗ Removido "center total" para evitar corte */
+  justify-content: flex-start; /* Alinha o conteúdo no topo */
 }
 
 .mensagem {
@@ -185,13 +188,13 @@ margin-top: 4px;
 /* ... estilos anteriores mantidos ... */
 
 .carrossel {
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
-margin-bottom: 20px;
-z-index: 2;
-margin-top: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px; /* ⬅️ aumentado */
+  margin-bottom: 20px;
+  z-index: 2;
 }
 
 .imagem {
